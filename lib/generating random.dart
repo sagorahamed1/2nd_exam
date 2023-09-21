@@ -28,7 +28,8 @@ var calculateInterest = (List data, Function interestCalculator) {
 
     var totalInterest = interestCalculator(principleAmount, tenure, interestRate);
 
-    print("principle Amount: $principleAmount   Tenure: $tenure  Interest Rate: $interestRate  Total Amount: $totalInterest");
+
+    print(" $principleAmount        $tenure            $interestRate         $totalInterest");
   }
 };
 
@@ -55,13 +56,16 @@ List<Map<String, dynamic>> generateRandomData(int numScenarios) {
 
 void main() {
 
+
   var data = generateRandomData(5);
 
   // Call calculateInterest with your random data and the appropriate interest calculation function
   print("Compound Interest:");
+  print("  principle Amount       Tenure           Interest Rate           Total Amount");
   calculateInterest(data, calculateCompoundInterest);
-
+  print('=======================================================================================');
   print("\nSimple Interest:");
+  print("  principle Amount       Tenure           Interest Rate           Total Amount");
   calculateInterest(data, calculateSimpleInterest);
 
 
