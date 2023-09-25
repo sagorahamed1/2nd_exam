@@ -35,11 +35,11 @@ var calculateInterest = (List data, Function interestCalculator) {
 
 
 // Generate random data for scenarios
-List<Map<String, dynamic>> generateRandomData(int numScenarios) {
+List<Map<String, dynamic>> generateRandomData(int numOfcountloop) {
   var random = Random();
   List<Map<String, dynamic>> data = [];
 
-  for (int i = 0; i < numScenarios; i++) {
+  for (int i = 0; i < numOfcountloop; i++) {
     var principleAmount = 100000 + random.nextDouble() * 900000;
     var tenure = random.nextInt(10) + 5;
     var interestRate = 5 + random.nextDouble() * 15;
